@@ -1,0 +1,41 @@
+.qrfooter{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.qrfooter-container{
+    width: 300px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+}
+
+.qrfooter-container > div {
+    width: 150px;
+    padding: 5px;
+}
+
+
+.qrfooter-titulo{
+    font-size: 1.2em;
+    text-align: right;
+}
+
+.qrfooter-img{
+    width: 100%;
+}
+
+.qrfooter-redes{
+    text-align: right;
+    padding: 0px !important;
+}
+
+.qrfooter-redes span{
+    font-size: 1.2em;
+    margin: 3px;
+}
+
+.qrfooter-redes span:hover{
+    color: #00A6E2;
+}

@@ -1,0 +1,59 @@
+.qr-page-container {
+  width: 100% !important;
+}
+
+.qr-button-page {
+  height: 40px;
+  border-radius: 40px !important;
+  margin-left: 5px !important;
+  margin-right: 5px !important;
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+  border: 2px solid #00a6e2;
+  background-color: transparent;
+  color: #00a6e2;
+  outline: none !important;
+}
+
+.qr-button-page:hover {
+  background-color: #00a6e2;
+  color: white;
+}
+
+.qr-button-page:active {
+    background-color: #00a6e28e;
+}
+
+
+.qr-generated-title{
+  font-family: "Shortie Admin Name" !important;
+  font-size: 2em;
+  margin-bottom: 20px;
+  color:  #00a6e2;
+}
+
+.qr-generated-subtitle{
+  font-family: "Shortie Admin Name" !important;
+  font-size: 1.2em;
+  width: 100% !important;
+  text-align: center;
+  color:  #00a6e2;
+}
+
+.qr-generated-link{
+  font-family: "Shortie Admin Name" !important;
+  font-size: 1em;
+  color:  #00a6e2;
+  text-decoration: none !important;
+  transition: .3s !important;
+}
+
+.qr-generated-link:hover{
+  transform: scale(1.1);
+  color:  #000000ce;
+}
+
+.qr-generated-link:active{
+  color:  #00a6e27a;
+    -webkit-text-stroke: .2px #ffffff;
+}

@@ -1,0 +1,223 @@
+.div-foot-form {
+  margin-top: 40px !important;
+  margin-bottom: 20px !important;
+  position: relative;
+}
+
+.div-foot-form > input {
+  width: 100% !important;
+  height: 2em;
+  font-size: 1em !important;
+  padding: 1.5em 0px 1.5em 2em;
+  border: 2px solid #00a6e2;
+  border-radius: 50px;
+
+  outline: none !important;
+  outline-color: #336475;
+}
+
+.div-foot-form > textarea {
+  width: 100% !important;
+  font-size: 1em !important;
+  padding: 1.5em 2em 1.5em 2em;
+  border: 2px solid #00a6e2;
+  border-radius: 50px;
+
+  outline: none !important;
+  outline-color: #336475;
+}
+
+.div-foot-form > select {
+  width: 100% !important;
+  font-size: 1.2em !important;
+  padding: 0.5em 17px 0.5em 2em;
+  border: 2px solid #00a6e2;
+  border-radius: 50px;
+  background-color: transparent !important;
+  background-image: url("../img/flecha.png");
+  background-size: 20px auto;
+  background-origin: content-box;
+  /* aquí deberás escribir la ruta de la imagen que utilizarás como flecha del desplegable */
+  background-repeat: no-repeat;
+  background-position: right center;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  outline: none !important;
+}
+.div-foot-form > select > option {
+  width: 100% !important;
+  font-size: 1em !important;
+  padding: 0.5em 0px 0.5em 2em;
+}
+
+.div-foot-img {
+  height: 250px;
+  width: 250px;
+  margin-right: 40px;
+  border-radius: 30px;
+  background-position: center top;
+  background-size: auto 100%;
+  border: 2px solid #00a6e2;
+}
+
+.div-foot-form-titulo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #00a6e2;
+  padding: 0.1em 1em 0.1em 1em;
+  font-size: 1.2em !important;
+  color: white;
+  border-radius: 50px;
+  position: absolute;
+  top: -1em;
+  left: -20px;
+}
+
+.file-container {
+  display: flex;
+
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  align-items: center;
+  width: auto;
+}
+.file-button {
+  width: auto;
+}
+
+.input-file {
+  display: none !important;
+}
+
+.label-input-file {
+  background-color: #00a6e2;
+  padding: 10px 20px 10px 20px;
+  color: white;
+  border: 2px solid #00a6e2;
+  border-radius: 50px;
+}
+
+.label-input-file:hover {
+  background-color: transparent;
+  padding: 10px 20px 10px 20px;
+  color: #00a6e2;
+  border: 2px solid #00a6e2;
+
+  border-radius: 50px;
+}
+
+.div-final-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  margin-bottom: 20px;
+  margin-top: 30px;
+}
+
+.div-final-buttons > button {
+  outline: none;
+  margin-left: 20px !important;
+  margin-right: 20px !important;
+}
+
+.red-color {
+  background-color: red !important;
+  border: 2px solid red !important;
+  color: white;
+}
+
+.red-color:hover {
+  background-color: white !important;
+  color: red !important;
+}
+
+/*--------------------------food-Container------------------------*/
+.plate-container {
+  width: 100%;
+  border-radius: 20px;
+
+  border: 1px solid #00a6e2;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.plate-img {
+  border-radius: 20px;
+  width: 100%;
+  height: 10em;
+  background-position: center top;
+  background-size: auto 100%;
+}
+
+.plate-text {
+  margin: 10px 10px 10px 10px;
+}
+
+.plate-text > h1 {
+  font-size: 0.9em;
+  margin-bottom: 2px;
+}
+
+.plate-text > h2 {
+  font-size: 0.8rem;
+}
+
+.plate-buttons {
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.plate-buttons > button {
+  font-size: 0.9em !important;
+  height: 30px !important;
+  padding: 2px 8px 2px 8px !important;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+/*-----------filter-----------------*/
+.filter-button {
+  display: flex;
+  align-items: center;
+}
+
+.filter-button > h1 {
+  font-size: 1.2em !important;
+  margin: 0px !important;
+  margin-left: auto !important;
+  margin-right: 10px;
+}
+
+.filter-button > select {
+  text-align: center !important;
+
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 1.2em !important;
+  padding: 0.2em 15px 0.2em 15px;
+  border: 2px solid #00a6e2;
+  background-color: #00a6e2 !important;
+  color: white !important;
+  border-radius: 50px;
+  background-color: #00a6e2 !important;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  outline: none !important;
+}
+
+.filter-button > select:hover {
+  background-color: transparent !important;
+  color: #00a6e2 !important;
+}

@@ -1,0 +1,49 @@
+.div-form {
+  margin-top: 40px !important;
+  margin-bottom: 20px !important;
+  position: relative;
+}
+
+.div-form>input {
+  width: 100% !important;
+  height: 2em;
+  font-size: 1em !important;
+  padding: 1.5em 0px 1.5em 2em;
+  border: 2px solid #00A6E2;
+  border-radius: 50px;
+
+
+  outline: none !important;
+  outline-color: #336475;
+
+}
+
+.div-form-titulo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #00A6E2;
+  padding: 0.1em 0em 0.1em 0em;
+  font-size: 1.5em !important;
+  width: 180px;
+  color: white;
+  border-radius: 50px;
+  position: absolute;
+  top: -1em;
+  left: -20px;
+}
+
+.div-form-button {
+  /* display: flex; */
+  margin-top: 1em;
+  margin-left: 85%;
+  padding: 0.5em 0.7em 0.5em 0.7em;
+  outline: none !important;
+  background-color: #000000;
+  font-size: 1em !important;
+  width: 15%;
+  color: white;
+  border-radius: 50px;
+
+
+}
