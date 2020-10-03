@@ -14,18 +14,18 @@ class Home extends React.Component {
 
   render() {
     return (
-      <div className="mt-5">
-        <ImageSlider/>
-        <br/>
-        <MenuDescription/>
-        <br/>
-        <Plans/>
-        <br/>
-        <QrTest/>
-        <br/>
-        <SignUp/>
-        <br/>
-        <QrFooter/>
+      <div className="mt-3">
+        <ImageSlider className="mb-5" />
+        <br />
+        <MenuDescription className="px-5" />
+        <br />
+        <Plans />
+        <br />
+        <QrTest />
+        <br />
+        <SignUp />
+        <br />
+        <QrFooter />
       </div>
     );
   }

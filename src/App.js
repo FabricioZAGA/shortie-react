@@ -11,6 +11,7 @@ import NavBar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Menu from "./components/Menu";
 import AdminPage from "./components/AdminPage";
+import Login from "./components/Login"
 import "./App.css";
 
 import Logo from "./img/logo.png";
@@ -33,6 +34,10 @@ function App() {
             </Route>
             <Route path="/admin/console/:type/:name">
               <AdminPage num="4" />
+
+            </Route>
+            <Route path="/login">
+              <Login />
 
             </Route>
             <Route exact path="/">

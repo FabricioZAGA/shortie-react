@@ -47,7 +47,98 @@
   padding: 0.2em 0px 1.5em 2em;
   border: 2px solid #00A6E2;
   border-radius: 50px;
-
   outline-color: #336475;
 
+}
+
+.loginScreen {
+  background-color: #04c4f4;
+  height: 100vh;
+}
+
+
+@media (max-width: 600px) {
+  .centeredLogin {
+    border-radius: 25px;
+    width: 80%;
+    height: 35%;
+    margin: 0 auto;
+    padding: 10px;
+    position: relative;
+    margin-top: 50px;
+    background-color: white;
+  }
+}
+
+@media (min-width: 500px) {
+  .centeredLogin {
+    border-radius: 25px;
+    width: 30%;
+    height: 45%;
+    margin: 0 auto;
+    padding: 10px;
+    position: relative;
+    margin-top: 120px;
+    background-color: white;
+  }
+}
+
+
+
+.divFormLogin {
+  margin-top: 40px !important;
+  margin-bottom: 20px !important;
+  position: relative;
+}
+
+.divFormLogin>input {
+  width: 100% !important;
+  height: .5em;
+  font-size: .85em !important;
+  padding: 1.2em 0px 1em 1em;
+  border: 2px solid #00A6E2;
+  border-radius: 50px;
+  outline: none !important;
+  outline-color: #336475;
+
+}
+
+.divFormTituloLogin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #00A6E2;
+  padding: 0.1em 0em 0.1em 0em;
+  font-size: 1em !important;
+  width: 100px;
+  color: white;
+  border-radius: 50px;
+  position: absolute;
+  top: -1.5em;
+  left: -20px;
+}
+
+.textTitleLogin {
+  font-family: "Shortie Principal" !important;
+  font-size: 1.5em;
+  text-align: right;
+}
+
+.buttonLogin {
+  float: right;
+  background-color: #00A6E2;
+  font-family: "Shortie Admin Name" !important;
+  font-size: .75em;
+  border-radius: 50px;
+  margin: 0px 15px 0px 0px;
+}
+
+.buttonRegistro {
+  background-color: transparent;
+  color: black;
+  font-family: "Shortie Admin Name" !important;
+  font-size: .55em;
+  border-radius: 50px;
+  outline-color: #336475;
+  margin: 0px 0px 0px 10px;
 }
