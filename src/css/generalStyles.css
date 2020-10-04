@@ -51,8 +51,15 @@
 
 }
 
+.navImgLogin {
+  width: 100%;
+  height: 100px;
+  background-color: red;
+}
+
 .loginScreen {
   background-color: #04c4f4;
+  width: 100vw !important;
   height: 100vh;
 }
 

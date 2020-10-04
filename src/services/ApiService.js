@@ -1,31 +1,34 @@
 import axios from "axios";
 
-export default class PostsService {
+export default class ApiService {
+
+
   static endpoint =
-    "http://ec2-52-90-188-77.compute-1.amazonaws.com:5000/api/v1/posts";
-  static getPosts() {
-    return axios.get(PostsService.endpoint);
+    `https://ojnf8gtuh8.execute-api.us-east-2.amazonaws.com/dev/api/v1/`;
+  static get(type) {
+
+    return axios.get(`${ApiService.endpoint}${type}`);
   }
-  static getPostsById(id) {
-    return axios.get(`${PostsService.endpoint}/${id}`);
+  static getById(id, type) {
+    return axios.get(`${ApiService.endpoint}${type}/${id}`);
   }
 
-  static createPost(post) {
-    return axios.post(PostsService.endpoint, post, {
+  static create(post, type) {
+    return axios.post(`${ApiService.endpoint}${type}`, post, {
       headers: {
         "Content-Type": "application/json"
       }
     });
   }
-  static updatePost(id, post) {
-    return axios.put(`${PostsService.endpoint}/${id}`, post, {
+  static update(id, post, type) {
+    return axios.put(`${ApiService.endpoint}/${id}`, post, {
       headers: {
         "Content-Type": "application/json"
       }
     });
   }
 
-  static deletePost(id) {
-    return axios.delete(`${PostsService.endpoint}/${id}`);
+  static delete(id, type) {
+    return axios.delete(`${ApiService.endpoint}/${id}`);
   }
 }
