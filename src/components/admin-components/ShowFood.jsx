@@ -9,12 +9,12 @@ class ShowFood extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      foot: [1, 1, 1, 1, 1, 1, 11, 1],
+      food: [1, 1, 1, 1, 1, 1, 11, 1],
     };
   }
 
   _renderFootChoice() {
-    return this.state.foot.map((f) => (
+    return this.state.food.map((f) => (
       <Col sm="6" md="4" lg="3">
         <FoodContainer
           imagen="https://i.pinimg.com/originals/f2/b9/38/f2b9385ad792f327da0973ca93c98bb3.jpg"

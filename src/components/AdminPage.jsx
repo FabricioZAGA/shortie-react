@@ -9,6 +9,8 @@ import ShowFood from "./admin-components/ShowFood";
 import AddUpdateFood from "./admin-components/AddUpdateFood";
 import DownloadQr from "./admin-components/DownloadQr";
 
+import Cookies from "../services/CookiesService"
+
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../css/admin.css";
 import Logo from "../img/logo.png";
@@ -27,10 +29,17 @@ class AdminPage extends React.Component {
   }
 
   async componentDidMount() {
+    if (!Cookies.get('login-record-set')) {
+      this.props.history.push(
+        `/home`)
+    }
+
     document.title = `${this.state.restaurantUser} admin console`;
 
     this._changeComponent();
   }
+
+
 
   _changeComponent(actualPa) {
     if (actualPa === undefined) {
@@ -60,7 +69,7 @@ class AdminPage extends React.Component {
             onSubmit={this._changeComponent.bind(this)}
           />
         );
-        component = <DownloadQr code={this.state.id}/>;
+        component = <DownloadQr code={this.state.id} />;
         break;
       case "products":
         numero = (

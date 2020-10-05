@@ -9,7 +9,7 @@ class Menu extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      foot: [],
+      food: [],
       restaurantName: props.match.params.id,
     };
   }
@@ -17,7 +17,7 @@ class Menu extends React.Component {
   async componentDidMount() {
     document.title = this.state.restaurantName;
     this.setState({
-      foot: [
+      food: [
         {
           name: "TÍTULO",
           img: "https://picsum.photos/500/500",
@@ -47,17 +47,17 @@ class Menu extends React.Component {
   }
 
   _renderFootChoice() {
-    return this.state.foot.map((f) => (
+    return this.state.food.map((f) => (
       <Col xs="12">
         <div className="food-container">
-            <div className="food-texto">
-                <h1>{f.name}</h1>
-                <h2>{f.description}</h2>
-            </div>
-            <div className="food-img" style={{backgroundImage: `url(${f.img})`}}></div>
-            <div className="food-button">
-                ${f.price}
-            </div>
+          <div className="food-texto">
+            <h1>{f.name}</h1>
+            <h2>{f.description}</h2>
+          </div>
+          <div className="food-img" style={{ backgroundImage: `url(${f.img})` }}></div>
+          <div className="food-button">
+            ${f.price}
+          </div>
         </div>
       </Col>
     ));
@@ -75,10 +75,10 @@ class Menu extends React.Component {
         </div>
         <div className="logo-space"></div>
         <div className="opciones-button">
-            <button>POPULAR</button>
-            <button>BEBIDAS</button>
-            <button>ENTRADAS</button>
-            <button>PLATILLOS</button>
+          <button>POPULAR</button>
+          <button>BEBIDAS</button>
+          <button>ENTRADAS</button>
+          <button>PLATILLOS</button>
         </div>
         <Container>
           <Row>{this._renderFootChoice()}</Row>

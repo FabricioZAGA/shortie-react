@@ -11,6 +11,9 @@ import SignUp from './home-components/SignUp'
 
 class Home extends React.Component {
 
+  async componentDidMount() {
+    document.title = `Shortie`;
+  }
 
   render() {
     return (

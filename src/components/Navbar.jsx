@@ -13,7 +13,7 @@ class Navbar extends React.Component {
     };
   }
 
-  
+
 
   async componentDidMount() {
     this.setState({
@@ -32,6 +32,12 @@ class Navbar extends React.Component {
     ));
   }
 
+  _handleLoginButton() {
+    this.props.history.push(
+      `/login`)
+  }
+
+
   render() {
     return (
       <div className="Navbar">
@@ -40,7 +46,7 @@ class Navbar extends React.Component {
         </div>
         <div className="medioHamburger">{this._renderCenterButton()}</div>
         <div className="iniciarSesion">
-          <button>INICIAR SESIÓN</button>
+          <button onClick={this._handleLoginButton.bind(this)}>INICIAR SESIÓN</button>
         </div>
       </div>
     );

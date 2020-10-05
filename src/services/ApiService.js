@@ -4,7 +4,8 @@ export default class ApiService {
 
 
   static endpoint =
-    `https://ojnf8gtuh8.execute-api.us-east-2.amazonaws.com/dev/api/v1/`;
+    //`https://ojnf8gtuh8.execute-api.us-east-2.amazonaws.com/dev/api/v1/`;
+    `http://localhost:5000/api/v1/`;
   static get(type) {
 
     return axios.get(`${ApiService.endpoint}${type}`);

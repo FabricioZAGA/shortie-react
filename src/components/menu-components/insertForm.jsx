@@ -43,30 +43,30 @@ class ShowFood extends React.Component {
   render() {
     return (
       <div>
-        <div className="div-foot-form">
+        <div className="div-food-form">
           <input type="text" />
-          <div className="div-foot-form-titulo">PLATILLO A PAGAR</div>
+          <div className="div-food-form-titulo">PLATILLO A PAGAR</div>
         </div>
-        <div className="div-foot-form">
+        <div className="div-food-form">
           <input type="text" />
-          <div className="div-foot-form-titulo">PRECIO</div>
+          <div className="div-food-form-titulo">PRECIO</div>
         </div>
-        <div className="div-foot-form">
+        <div className="div-food-form">
           <textarea
             style={{ borderRadius: 30 }}
             rows="5"
             maxlength="250"
             cols="50"
           ></textarea>
-          <div className="div-foot-form-titulo">DESCRIPCIÓN</div>
+          <div className="div-food-form-titulo">DESCRIPCIÓN</div>
         </div>
         <div className="file-container">
-          <div className="div-foot-form">
+          <div className="div-food-form">
             <div
-              className="div-foot-img"
+              className="div-food-img"
               style={{ backgroundImage: `url(${this.state.fileBase64})` }}
             />
-            <div className="div-foot-form-titulo">INSERTAR FOTOGRAFÍA</div>
+            <div className="div-food-form-titulo">INSERTAR FOTOGRAFÍA</div>
           </div>
           <div className="file-button">
             <label className="label-input-file" for="upload-photo">
@@ -81,13 +81,13 @@ class ShowFood extends React.Component {
             />
           </div>
         </div>
-        <div className="div-foot-form">
+        <div className="div-food-form">
           <select>
             <option selected>PLATILLO FUERTE</option>
             <option>BEBIDAS</option>
             <option>ENTRADAS</option>
           </select>
-          <div className="div-foot-form-titulo">TIPO DE COMIDA</div>
+          <div className="div-food-form-titulo">TIPO DE COMIDA</div>
         </div>
         <div className="div-final-buttons">
           <button className="label-input-file">GUARDAR</button>

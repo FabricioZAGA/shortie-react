@@ -1,10 +1,10 @@
-.div-foot-form {
+.div-food-form {
   margin-top: 40px !important;
   margin-bottom: 20px !important;
   position: relative;
 }
 
-.div-foot-form > input {
+.div-food-form > input {
   width: 100% !important;
   height: 2em;
   font-size: 1em !important;
@@ -16,7 +16,7 @@
   outline-color: #336475;
 }
 
-.div-foot-form > textarea {
+.div-food-form > textarea {
   width: 100% !important;
   font-size: 1em !important;
   padding: 1.5em 2em 1.5em 2em;
@@ -27,7 +27,7 @@
   outline-color: #336475;
 }
 
-.div-foot-form > select {
+.div-food-form > select {
   width: 100% !important;
   font-size: 1.2em !important;
   padding: 0.5em 17px 0.5em 2em;
@@ -46,13 +46,13 @@
   appearance: none;
   outline: none !important;
 }
-.div-foot-form > select > option {
+.div-food-form > select > option {
   width: 100% !important;
   font-size: 1em !important;
   padding: 0.5em 0px 0.5em 2em;
 }
 
-.div-foot-img {
+.div-food-img {
   height: 250px;
   width: 250px;
   margin-right: 40px;
@@ -62,7 +62,7 @@
   border: 2px solid #00a6e2;
 }
 
-.div-foot-form-titulo {
+.div-food-form-titulo {
   display: flex;
   justify-content: center;
   align-items: center;
