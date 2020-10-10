@@ -11,13 +11,13 @@ class SignUp extends React.Component {
           <Row clasName="p-5">
             <Col sm={7}>
               <Row>
-                <Col xs={6}>
+                <Col xs={12}>
                   <div className="div-form">
                     <input type="text" />
                     <div className="div-form-titulo">Nombre</div>
                   </div>
                 </Col>
-                <Col xs={6}>
+                <Col xs={12}>
                   <div className="div-form">
                     <input type="text" />
                     <div className="div-form-titulo">Apellido(s)</div>
@@ -25,20 +25,20 @@ class SignUp extends React.Component {
                 </Col>
               </Row>
               <Row>
-                <Col xs={6}>
+                <Col xs={12}>
                   <div className="div-form">
                     <input type="text" />
                     <div className="div-form-titulo">Email</div>
                   </div>
                 </Col>
-                <Col xs={6}>
+                <Col xs={12}>
                   <div className="div-form">
                     <input type="password" />
                     <div className="div-form-titulo">Contraseña</div>
                   </div>
                 </Col>
               </Row>
-              <Row>
+              {/* <Row>
                 <Col xs={4}>
                   <div className="div-form">
                     <input type="number" />
@@ -73,7 +73,7 @@ class SignUp extends React.Component {
                     <div className="div-form-titulo">C.P.</div>
                   </div>
                 </Col>
-              </Row>
+              </Row> */}
 
               <div>
                 <button className="div-form-button">Aceptar</button>
