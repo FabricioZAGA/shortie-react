@@ -4,7 +4,7 @@
   position: relative;
 }
 
-.div-food-form > input {
+.div-food-form>input {
   width: 100% !important;
   height: 2em;
   font-size: 1em !important;
@@ -16,7 +16,7 @@
   outline-color: #336475;
 }
 
-.div-food-form > textarea {
+.div-food-form>textarea {
   width: 100% !important;
   font-size: 1em !important;
   padding: 1.5em 2em 1.5em 2em;
@@ -27,7 +27,7 @@
   outline-color: #336475;
 }
 
-.div-food-form > select {
+.div-food-form>select {
   width: 100% !important;
   font-size: 1.2em !important;
   padding: 0.5em 17px 0.5em 2em;
@@ -46,7 +46,8 @@
   appearance: none;
   outline: none !important;
 }
-.div-food-form > select > option {
+
+.div-food-form>select>option {
   width: 100% !important;
   font-size: 1em !important;
   padding: 0.5em 0px 0.5em 2em;
@@ -84,6 +85,7 @@
   align-items: center;
   width: auto;
 }
+
 .file-button {
   width: auto;
 }
@@ -93,6 +95,7 @@
 }
 
 .label-input-file {
+  outline: none !important;
   background-color: #00a6e2;
   padding: 10px 20px 10px 20px;
   color: white;
@@ -118,7 +121,7 @@
   margin-top: 30px;
 }
 
-.div-final-buttons > button {
+.div-final-buttons>button {
   outline: none;
   margin-left: 20px !important;
   margin-right: 20px !important;
@@ -159,12 +162,12 @@
   margin: 10px 10px 10px 10px;
 }
 
-.plate-text > h1 {
+.plate-text>h1 {
   font-size: 0.9em;
   margin-bottom: 2px;
 }
 
-.plate-text > h2 {
+.plate-text>h2 {
   font-size: 0.8rem;
 }
 
@@ -177,7 +180,7 @@
   margin-bottom: 15px;
 }
 
-.plate-buttons > button {
+.plate-buttons>button {
   font-size: 0.9em !important;
   height: 30px !important;
   padding: 2px 8px 2px 8px !important;
@@ -191,14 +194,14 @@
   align-items: center;
 }
 
-.filter-button > h1 {
+.filter-button>h1 {
   font-size: 1.2em !important;
   margin: 0px !important;
   margin-left: auto !important;
   margin-right: 10px;
 }
 
-.filter-button > select {
+.filter-button>select {
   text-align: center !important;
 
   margin-left: 10px;
@@ -217,7 +220,7 @@
   outline: none !important;
 }
 
-.filter-button > select:hover {
+.filter-button>select:hover {
   background-color: transparent !important;
   color: #00a6e2 !important;
 }

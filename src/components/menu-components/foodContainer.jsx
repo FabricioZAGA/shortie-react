@@ -5,6 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 class Plans extends React.Component {
   constructor(props) {
     super(props);
+    console.log(props)
     this.state = {
       img: props.imagen,
       title: props.titulo,
@@ -24,7 +25,7 @@ class Plans extends React.Component {
           <h2>{this.state.description}</h2>
         </div>
         <div className="plate-buttons">
-          <button className="label-input-file">GUARDAR</button>
+          <button className="label-input-file">EDITAR</button>
           <button className="icon-bin2 label-input-file red-color"></button>
         </div>
       </div>

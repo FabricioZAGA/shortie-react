@@ -1,4 +1,7 @@
 import React from "react";
+import ApiService from '../../services/ApiService';
+import Cookies from '../../services/CookiesService'
+
 import { Container, Row, Col } from "react-bootstrap";
 import { withRouter } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -8,18 +11,40 @@ import FoodContainer from "../menu-components/foodContainer";
 class ShowFood extends React.Component {
   constructor(props) {
     super(props);
+
     this.state = {
-      food: [1, 1, 1, 1, 1, 1, 11, 1],
+      id: Cookies.get('login-record-set').id,
+      dishes: [],
     };
   }
 
-  _renderFootChoice() {
-    return this.state.food.map((f) => (
+  async componentDidMount() {
+
+    this.getAllDishes()
+  }
+
+  async getAllDishes() {
+    var response = await ApiService.getById(this.state.id, 'menus')
+    response = response.data;
+
+    if (response) {
+      this.setState({
+        ...this.state,
+        dishes: response.dishes
+      })
+
+    }
+  }
+
+
+  renderDishes() {
+
+    return this.state.dishes.map(element => (
       <Col sm="6" md="4" lg="3">
         <FoodContainer
-          imagen="https://i.pinimg.com/originals/f2/b9/38/f2b9385ad792f327da0973ca93c98bb3.jpg"
-          titulo="TÍTULO"
-          desc="Descripción del platillo que se muestra en la imagen"
+          imagen={element.img}
+          titulo={element.name}
+          desc={element.description}
         />
       </Col>
     ));
@@ -40,7 +65,7 @@ class ShowFood extends React.Component {
             </div>
           </Col>
         </Row>
-        <Row>{this._renderFootChoice()}</Row>
+        <Row>{this.renderDishes()}</Row>
       </Container>
     );
   }

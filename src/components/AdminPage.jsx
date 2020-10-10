@@ -1,5 +1,7 @@
 import React from "react";
 import qs from "query-string";
+import ApiService from '../services/ApiService';
+
 
 import { withRouter, Switch, Route, Redirect } from "react-router-dom";
 
@@ -19,7 +21,7 @@ class AdminPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      id: qs.parse(this.props.location.search).code,
+      id: '',
       name: qs.parse(this.props.location.search).name,
       actualPage: props.match.params.type,
       restaurantUser: props.match.params.name,
@@ -29,6 +31,7 @@ class AdminPage extends React.Component {
   }
 
   async componentDidMount() {
+    this.getMenuIdByUserEmail();
     if (!Cookies.get('login-record-set')) {
       this.props.history.push(
         `/home`)
@@ -36,9 +39,30 @@ class AdminPage extends React.Component {
 
     document.title = `${this.state.restaurantUser} admin console`;
 
+    this.getMenuIdByUserEmail();
     this._changeComponent();
+
+
   }
 
+  async getMenuIdByUserEmail() {
+    var response = await ApiService.get('menus')
+    response = response.data;
+
+    if (response) {
+      response.forEach(element => {
+        if (element.userEmail.trim() == (this.state.name.trim())) {
+          this.setState({
+            ...this.state,
+            id: element.id
+
+          })
+          Cookies.set('login-record-set', this.state)
+          return
+        }
+      });
+    }
+  }
 
 
   _changeComponent(actualPa) {
@@ -78,7 +102,7 @@ class AdminPage extends React.Component {
             onSubmit={this._changeComponent.bind(this)}
           />
         );
-        component = <ShowFood />;
+        component = <ShowFood id={this.state.id} />;
         break;
       case "upload":
         numero = (

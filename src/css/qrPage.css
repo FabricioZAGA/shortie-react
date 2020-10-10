@@ -21,39 +21,40 @@
 }
 
 .qr-button-page:active {
-    background-color: #00a6e28e;
+  background-color: #00a6e28e;
 }
 
 
-.qr-generated-title{
+.qr-generated-title {
   font-family: "Shortie Admin Name" !important;
   font-size: 2em;
   margin-bottom: 20px;
-  color:  #00a6e2;
+  color: #00a6e2;
 }
 
-.qr-generated-subtitle{
+.qr-generated-subtitle {
   font-family: "Shortie Admin Name" !important;
   font-size: 1.2em;
   width: 100% !important;
   text-align: center;
-  color:  #00a6e2;
+  color: #00a6e2;
 }
 
-.qr-generated-link{
+.qr-generated-link {
   font-family: "Shortie Admin Name" !important;
   font-size: 1em;
-  color:  #00a6e2;
+  color: #00a6e2;
+  text-align: center !important;
   text-decoration: none !important;
   transition: .3s !important;
 }
 
-.qr-generated-link:hover{
+.qr-generated-link:hover {
   transform: scale(1.1);
-  color:  #000000ce;
+  color: #000000ce;
 }
 
-.qr-generated-link:active{
-  color:  #00a6e27a;
-    -webkit-text-stroke: .2px #ffffff;
+.qr-generated-link:active {
+  color: #00a6e27a;
+  -webkit-text-stroke: .2px #ffffff;
 }

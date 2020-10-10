@@ -1,5 +1,8 @@
 //import QRCode from "qrcode.react";
 import { QRCode } from "react-qrcode-logo";
+import Cookies from "../../services/CookiesService"
+
+
 import React from "react";
 import { withRouter } from "react-router-dom";
 import { Container, Row, Col } from "react-bootstrap";
@@ -8,10 +11,11 @@ import "../../css/qrPage.css";
 class DownloadQr extends React.Component {
   constructor(props) {
     super(props);
+
     this.state = {
       name: "pf-changs",
-      value: props.code,
-      link: `http://localhost:3000/menu/${props.code}`,
+      value: Cookies.get('login-record-set').id,
+      link: `http://localhost:3000/menu/${Cookies.get('login-record-set').id}`,
     };
   }
 
