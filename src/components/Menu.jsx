@@ -1,4 +1,6 @@
 import React from "react";
+import ApiService from "../services/ApiService";
+
 import { Container, Row, Col } from "react-bootstrap";
 import { withRouter } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -9,79 +11,82 @@ class Menu extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      food: [],
+      menu: '',
       restaurantName: props.match.params.id,
+      categories: ''
     };
   }
-
   async componentDidMount() {
     document.title = this.state.restaurantName;
-    this.setState({
-      food: [
-        {
-          name: "TÍTULO",
-          img: "https://picsum.photos/500/500",
-          description: "Descripción del platillo que se muestra en la imagen",
-          price: 50,
-        },
-        {
-          name: "TÍTULO",
-          img: "https://picsum.photos/500/500",
-          description: "Descripción del platillo que se muestra en la imagen",
-          price: 50,
-        },
-        {
-          name: "TÍTULO",
-          img: "https://picsum.photos/500/500",
-          description: "Descripción del platillo que se muestra en la imagen",
-          price: 50,
-        },
-        {
-          name: "TÍTULO",
-          img: "https://picsum.photos/500/500",
-          description: "Descripción del platillo que se muestra en la imagen",
-          price: 50,
-        },
-      ],
-    });
+
+    console.log(this.state.restaurantName)
+
+    var response = await ApiService.getById(this.state.restaurantName, 'menus')
+
+    var categories = await ApiService.getById(this.state.restaurantName, 'menus/categories')
+
+    if (response) {
+      this.setState({
+        ...this.state,
+        menu: response.data,
+        categories: categories.data
+      })
+    }
+
   }
 
-  _renderFootChoice() {
-    return this.state.food.map((f) => (
-      <Col xs="12">
-        <div className="food-container">
-          <div className="food-texto">
-            <h1>{f.name}</h1>
-            <h2>{f.description}</h2>
+  renderLoadedDishes() {
+
+    if (this.state.menu.dishes) {
+      return this.state.menu.dishes.map((f) => (
+        <Col xs="12">
+          <div className="food-container">
+            <div className="food-texto">
+              <h1>{f.name}</h1>
+              <h2>{f.description}</h2>
+            </div>
+            <div className="food-img" style={{ backgroundImage: `url(${f.img})` }}></div>
+            <div className="food-button">
+              ${f.price}
+            </div>
           </div>
-          <div className="food-img" style={{ backgroundImage: `url(${f.img})` }}></div>
-          <div className="food-button">
-            ${f.price}
-          </div>
-        </div>
-      </Col>
-    ));
+        </Col>
+      ));
+    }
+    else {
+      return
+    }
   }
+
+  renderCategories() {
+    if (this.state.categories) {
+      return this.state.categories.map((f, index) => (
+        <button key={index}>{f}</button>
+      ))
+    }
+
+    return
+
+  }
+
+
   render() {
     return (
       <div className="mt-3">
         <div
           className="div-menu-img"
-          style={{ backgroundImage: "url(https://picsum.photos/500/200)" }}
+          style={{ backgroundImage: `url(${this.state.menu.bannerImg})` }}
         >
           <div className="logo-circle">
-            <img src={Tacos} alt="" />
+            <div style={{ backgroundImage: `url(${this.state.menu.logoImg})` }}></div>
           </div>
         </div>
         <div className="logo-space"></div>
         <div className="opciones-button">
-          <button>POPULAR</button>
-          <button>BEBIDAS</button>
-          <button>ENTRADAS</button>
-          <button>PLATILLOS</button>
+          {this.renderCategories()}
         </div>
         <Container>
-          <Row>{this._renderFootChoice()}</Row>
+          <Row>{this.renderLoadedDishes()}</Row>
         </Container>
       </div>
     );

@@ -1,13 +1,25 @@
 .Navbar {
   display: flex;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  z-index: 100000;
+  background-color: white;
 }
 
-.imgNavBar > img {
+.navContainer {
+  width: 100%;
+  height: 100px;
+}
+
+.imgNavBar>img {
   margin-left: 50px;
   width: 100px;
+
 }
 
-.iniciarSesion > button {
+.iniciarSesion>button {
   height: 40px;
   border-radius: 40px !important;
   padding-left: 10px !important;
@@ -18,7 +30,7 @@
   outline: none !important;
 }
 
-.iniciarSesion > button:hover {
+.iniciarSesion>button:hover {
   background-color: black;
   color: white;
 }
@@ -39,8 +51,8 @@
     margin-right: auto !important;
   }
 
-  .imgNavBar > img {
-    margin-left:  auto !important;
+  .imgNavBar>img {
+    margin-left: auto !important;
     margin-right: auto !important;
   }
 
@@ -58,11 +70,13 @@
   .iniciarSesion {
     width: 150px;
   }
+
   .medioHamburger {
     margin-left: auto;
     margin-right: auto;
     display: flex;
     align-items: center;
+
   }
 
   .buttonNavbar {
@@ -76,6 +90,11 @@
     background-color: transparent;
     color: #00A6E2;
     outline: none !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none !important;
+    cursor: pointer;
   }
 
   .buttonNavbar:hover {
@@ -95,7 +114,7 @@
 .footer {
   text-align: center;
 
-  /*--Para poner footer hasta abajo--*/ 
+  /*--Para poner footer hasta abajo--*/
   /* position: fixed;
   left: 0;
   bottom: 0;
@@ -115,7 +134,7 @@
   height: 70px;
 }
 
-.footer-container > div {
+.footer-container>div {
   width: 100%;
   height: 100%;
   display: flex;
@@ -145,7 +164,7 @@
   justify-content: center;
 }
 
-.footer-img > img {
+.footer-img>img {
   width: 105% !important;
 }
 

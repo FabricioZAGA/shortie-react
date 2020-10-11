@@ -12,6 +12,8 @@ import Footer from "./components/Footer";
 import Menu from "./components/Menu";
 import AdminPage from "./components/AdminPage";
 import Login from "./components/Login"
+import Error from "./components/Error";
+
 import "./App.css";
 
 import Logo from "./img/logo.png";
@@ -38,10 +40,13 @@ function App() {
             </Route>
             <Route path="/login">
               <Login />
-
             </Route>
+
             <Route exact path="/">
               <Redirect to="/home" />
+            </Route>
+            <Route path="*" status={404}>
+              <Error />
             </Route>
           </Switch>
         </Container>

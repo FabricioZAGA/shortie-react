@@ -7,7 +7,7 @@ class SignUp extends React.Component {
   render() {
     return (
       <div>
-        <Container>
+        <Container id="section4">
           <Row clasName="p-5">
             <Col sm={7}>
               <Row>

@@ -15,7 +15,7 @@ class DownloadQr extends React.Component {
     this.state = {
       name: "pf-changs",
       value: Cookies.get('login-record-set').id,
-      link: `http://localhost:3000/menu/${Cookies.get('login-record-set').id}`,
+      link: `http://192.168.100.3:3000/menu/${Cookies.get('login-record-set').id}`,
     };
   }
 

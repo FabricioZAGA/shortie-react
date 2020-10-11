@@ -313,7 +313,7 @@
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  z-index: 10000000000;
+  z-index: 50;
 }
 
 .awssld__bullets button {
