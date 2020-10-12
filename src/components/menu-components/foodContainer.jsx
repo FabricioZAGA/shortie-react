@@ -5,7 +5,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 class Plans extends React.Component {
   constructor(props) {
     super(props);
-    console.log(props)
     this.state = {
       img: props.imagen,
       title: props.titulo,

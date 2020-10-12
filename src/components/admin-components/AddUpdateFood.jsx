@@ -47,9 +47,6 @@ class AddUpdateFood extends React.Component {
       if (i < 3)
         array.push(element);
     });
-
-    console.log(array)
-
     return array.map(element => (
       <FoodContainer
         imagen={element.img}

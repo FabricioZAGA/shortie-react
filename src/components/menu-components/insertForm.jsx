@@ -7,22 +7,21 @@ import { withRouter } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../../css/ShowFood.css";
 
-
 class ShowFood extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      file: '',
+      file: "",
       fileName: "EXAMINAR",
       fileBase64: "",
+      data: {},
     };
   }
 
   _getimgBase64(base, f) {
     if (base && base[0]) {
       var FR = new FileReader();
-      console.log(this._bool);
 
       FR.readAsDataURL(base[0]);
 
@@ -46,14 +45,21 @@ class ShowFood extends React.Component {
 
     this.setState({
       ...this.state,
-      file: event.target.files[0]
+      file: event.target.files[0],
     });
 
     await this._getimgBase64(event.target.files, fileName);
   }
 
+  async _uploadToS3() {
+    var s3 = await S3Service.uploadFile(this.state.file);
+
+    console.log(s3);
+    return s3;
+  }
+
   _handleSubmit() {
-    S3Service.uploadFile(this.state.file)
+    this._uploadToS3();
   }
 
   render() {
@@ -106,7 +112,12 @@ class ShowFood extends React.Component {
           <div className="div-food-form-titulo">TIPO DE COMIDA</div>
         </div>
         <div className="div-final-buttons">
-          <button className="label-input-file" onClick={(e) => this._handleSubmit(e)}>GUARDAR</button>
+          <button
+            className="label-input-file"
+            onClick={(e) => this._handleSubmit(e)}
+          >
+            GUARDAR
+          </button>
           <button className="icon-bin2 label-input-file red-color"></button>
         </div>
       </div>
