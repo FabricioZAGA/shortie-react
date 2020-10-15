@@ -1,4 +1,12 @@
+
+
 /*--------------------------Planes--------------------------------*/
+:root {
+  --main-size-height: 89%;
+}
+
+
+
 .container-plan {
   position: relative;
 
@@ -29,95 +37,31 @@
   position: relative;
   height: 25px;
 }
-.curv {
+.curvas::before{
+  content: '';
   position: absolute;
-  border: 11px solid #00A6E2;
+  top: 0px;
+  width: 100%;
+  height: 12.5px;
+  background: radial-gradient(40% 100px ellipse at 22% 100px, transparent var(--main-size-height), #00A6E2 var(--main-size-height),  #00A6E2 100%, transparent 100%),
+  radial-gradient(40% 100px ellipse at 78% 100px, transparent var(--main-size-height), #00A6E2 var(--main-size-height),  #00A6E2 100%, transparent 100%),
+  radial-gradient(40% 100px ellipse at 50% 100px, transparent var(--main-size-height), #b0dbeb var(--main-size-height),  #b0dbeb 100%, transparent 100%),
+  radial-gradient(40% 100px ellipse at -6% 100px, transparent var(--main-size-height), #b0dbeb var(--main-size-height),  #b0dbeb 100%, transparent 100%),
+  radial-gradient(40% 100px ellipse at 106% 100px, transparent var(--main-size-height), #b0dbeb var(--main-size-height),  #b0dbeb 100%, transparent 100%)
+  ;
 }
-
-.curva-chica {
-  left: -4.7%;
-  width: 14%;
-  height: 30px;
-  bottom: 3px;
-  border-radius: 100%;
-  border-color: transparent transparent #00A6E2 transparent;
-  z-index: 10000;
-}
-.curva-1 {
-  left: 0px;
-  width: 42%;
-  border-color: #00A6E2 transparent transparent transparent;
-  border-radius: 100% 100% 0 0;
-  height: 50px;
-  z-index: 10000;
-}
-.curva-2 {
-  left: 29%;
-  width: 42%;
+.curvas::after{
+  content: '';
+  position: absolute;
   bottom: 0px;
-  border-color: transparent transparent #00A6E2 transparent;
-  border-radius: 0 0 100% 100%;
-  height: 50px;
-  z-index: 10000;
-}
-.curva-3 {
-  right: 0% !important;
-  width: 42%;
-  border-color: #00A6E2 transparent transparent transparent;
-  border-radius: 100% 100% 0 0;
-  height: 50px;
-  z-index: 10000;
-}
-.curva-opuesta-1 {
-  left: 0px;
-  width: 42%;
-  bottom: 0px;
-  border-color: transparent transparent #cfeefc transparent;
-  border-radius: 0 0 100% 100%;
-
-  height: 50px;
-}
-.curva-opuesta-2 {
-  left: 29%;
-  width: 42%;
-  border-color: #cfeefc transparent transparent transparent;
-  border-radius: 100% 100% 0 0;
-  height: 50px;
-}
-.curva-opuesta-3 {
-  right: 0% !important;
-  width: 42%;
-  bottom: 0px;
-  border-color: transparent transparent #cfeefc transparent;
-  border-radius: 0 0 100% 100%;
-  height: 50px;
-}
-.curva-chica-2 {
-  right: -4.7%;
-  width: 14%;
-  height: 30px;
-  bottom: 3px;
-  border-radius: 100%;
-  border-color: transparent transparent #00A6E2 transparent;
-  z-index: 10000;
-}
-
-.curva-opuesta-chica-2 {
-  right: -4.7%;
-  width: 14%;
-  height: 30px;
-  top: 3px;
-  border-radius: 100%;
-  border-color: #cfeefc transparent transparent transparent;
-}
-
-.curva-opuesta-chica {
-  left: -4.7%;
-  width: 14%;
-  height: 30px;
-  top: 3px;
-  border-radius: 100%;
-  border-color: #cfeefc transparent transparent transparent;
+  width: 100%;
+  height: 12.5px;
+  background: radial-gradient(40% 100px ellipse at 106% -87.5px, transparent var(--main-size-height), #00A6E2 var(--main-size-height),  #00A6E2 100%, transparent 100%),
+  radial-gradient(40% 100px ellipse at 50% -87.5px, transparent var(--main-size-height), #00A6E2 var(--main-size-height),  #00A6E2 100%, transparent 100%),
+  radial-gradient(40% 100px ellipse at -6% -87.5px, transparent var(--main-size-height), #00A6E2 var(--main-size-height),  #00A6E2 100%, transparent 100%),
+  radial-gradient(40% 100px ellipse at 22% -87.5px, transparent var(--main-size-height), #b0dbeb var(--main-size-height),  #b0dbeb 100%, transparent 100%),
+  radial-gradient(40% 100px ellipse at 78% -87.5px, transparent var(--main-size-height), #b0dbeb var(--main-size-height),  #b0dbeb 100%, transparent 100%)
+  ;
 }
 
 .linea-2 {

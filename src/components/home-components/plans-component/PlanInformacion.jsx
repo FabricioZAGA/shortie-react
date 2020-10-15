@@ -12,16 +12,6 @@ class Plans extends React.Component {
         <div className="container-plan">
           <div className="plan-title">PRO PLAN</div>
           <div className="curvas">
-            <div className="curv curva-chica"></div>
-            <div className="curv curva-opuesta-1"></div>
-            <div className="curv curva-opuesta-2"></div>
-            <div className="curv curva-opuesta-3"></div>
-            <div className="curv curva-1"></div>
-            <div className="curv curva-2"></div>
-            <div className="curv curva-3"></div>
-            <div className="curv curva-chica-2"></div>
-            <div className="curv curva-opuesta-chica"></div>
-            <div className="curv curva-opuesta-chica-2"></div>
             <div className="linea"></div>
             <div className="linea-2"></div>
           </div>
