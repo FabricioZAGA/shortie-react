@@ -1,0 +1,85 @@
+.navImgLogin {
+  width: 100%;
+  height: 100px;
+  background-color: red;
+}
+
+.loginScreen {
+  background-color: #04c4f4;
+  width: 100vw !important;
+  height: 100vh;
+}
+
+
+@media (max-width: 600px) {
+  .centeredDiv {
+    border-radius: 25px;
+    width: 80%;
+    height: 35%;
+    margin: 0 auto;
+    padding: 10px;
+    position: relative;
+    margin-top: 50px;
+    background-color: white;
+  }
+}
+
+@media (min-width: 500px) {
+  .centeredDiv {
+    border-radius: 25px;
+    width: 30%;
+    height: 45%;
+    margin: 0 auto;
+    padding: 10px;
+    position: relative;
+    background-color: white;
+  }
+}
+
+
+
+.divFormNewReg {
+  margin-top: 10px !important;
+  margin-bottom: 10px !important;
+  position: relative;
+}
+
+.divFormNewReg>input {
+  width: 100% !important;
+  height: .5em;
+  font-size: .85em !important;
+  padding: 1.2em 0px 1em 1em;
+  border: 2px solid black;
+  border-radius: 50px;
+  outline: none !important;
+  outline-color: #336475;
+
+}
+
+
+.textTitleLogin {
+  font-family: "Shortie Principal" !important;
+  font-size: 1.5em;
+  text-align: right;
+}
+
+.buttonNew {
+  margin-top: 10px !important;
+  margin-bottom: 10px !important;
+  float: right;
+  background-color: #00A6E2;
+  font-family: "Shortie Admin Name" !important;
+  font-size: .75em;
+  border-radius: 50px;
+  outline: none !important;
+}
+
+.buttonRegistro {
+  background-color: transparent;
+  color: black;
+  font-family: "Shortie Admin Name" !important;
+  font-size: .55em;
+  border-radius: 50px;
+  outline-color: #336475;
+  margin: 0px 0px 0px 10px;
+}

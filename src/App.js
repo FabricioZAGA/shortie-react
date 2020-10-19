@@ -13,6 +13,7 @@ import Menu from "./components/Menu";
 import AdminPage from "./components/AdminPage";
 import Login from "./components/Login"
 import Error from "./components/Error";
+import NewUser from "./components/NewUser"
 
 import "./App.css";
 
@@ -37,6 +38,11 @@ function App() {
             <Route path="/admin/console/:type/:name">
               <AdminPage num="4" />
 
+
+            </Route>
+
+            <Route path="/new">
+              <NewUser />
             </Route>
             <Route path="/login">
               <Login />

@@ -36,7 +36,10 @@ class AdminPage extends React.Component {
       this.props.history.push(
         `/home`)
     }
-
+    if (!Cookies.get('login-record-set').response.restaurantAddress) {
+      this.props.history.push(`/new`)
+    }
+    console.log(Cookies.get('login-record-set').response)
     document.title = `${this.state.restaurantUser} admin console`;
 
     this.getMenuIdByUserEmail();

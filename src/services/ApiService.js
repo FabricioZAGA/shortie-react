@@ -30,7 +30,7 @@ export default class ApiService {
   * @param {String} type query type
   * @return {axios} response
   */
-  static create(post, type) {
+  static insert(post, type) {
     return axios.post(`${ApiService.endpoint}${type}`, post, {
       headers: {
         "Content-Type": "application/json"
@@ -45,7 +45,8 @@ export default class ApiService {
   * @return {axios} response
   */
   static update(id, post, type) {
-    return axios.put(`${ApiService.endpoint}/${id}`, post, {
+    console.log(type)
+    return axios.put(`${ApiService.endpoint}${type}/${id}`, post, {
       headers: {
         "Content-Type": "application/json"
       }

@@ -39,7 +39,7 @@ class Login extends React.Component {
 
     if (response) {
       if (response.password == this.state.password) {
-        Cookies.set('login-record-set', { bool: true })
+        Cookies.set('login-record-set', { response, bool: true })
         this.props.history.push(
           `/admin/console/home/${response.restaurantName}?name=${response.email}`)
       }

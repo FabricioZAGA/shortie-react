@@ -1,9 +1,59 @@
 import React from "react";
+
+import ApiService from "../../services/ApiService";
+
 import { withRouter } from "react-router-dom";
 import { Form, Col, Button, Container, Row } from "react-bootstrap";
 import "../../css/singUp.css";
 import "../../css/generalStyles.css";
 class SignUp extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      email: '',
+      password: '',
+      name: '',
+      lastName: ''
+    };
+  }
+
+  _handleNameChange(event) {
+    this.setState({
+      ...this.state,
+      name: event.target.value
+    })
+  }
+
+  _handleLastNameChange(event) {
+    this.setState({
+      ...this.state,
+      lastName: event.target.value
+    })
+  }
+
+  _handleEmailChange(event) {
+    this.setState({
+      ...this.state,
+      email: event.target.value
+    })
+  }
+
+  _handlePasswordChange(event) {
+    this.setState({
+      ...this.state,
+      password: event.target.value
+    })
+  }
+
+  async _handleSubmit() {
+    console.log(this.state)
+    var response = await ApiService.insert(this.state, 'personalInfo')
+    if (response.status === 200) {
+      this.props.history.push(`/login`)
+    }
+    console.log(response)
+  }
+
   render() {
     return (
       <div>
@@ -13,13 +63,13 @@ class SignUp extends React.Component {
               <Row>
                 <Col xs={12}>
                   <div className="div-form">
-                    <input type="text" />
+                    <input type="text" onInput={this._handleNameChange.bind(this)} />
                     <div className="div-form-titulo">Nombre</div>
                   </div>
                 </Col>
                 <Col xs={12}>
                   <div className="div-form">
-                    <input type="text" />
+                    <input type="text" onInput={this._handleLastNameChange.bind(this)} />
                     <div className="div-form-titulo">Apellido(s)</div>
                   </div>
                 </Col>
@@ -27,13 +77,13 @@ class SignUp extends React.Component {
               <Row>
                 <Col xs={12}>
                   <div className="div-form">
-                    <input type="text" />
+                    <input type="text" onInput={this._handleEmailChange.bind(this)} />
                     <div className="div-form-titulo">Email</div>
                   </div>
                 </Col>
                 <Col xs={12}>
                   <div className="div-form">
-                    <input type="password" />
+                    <input type="password" onInput={this._handlePasswordChange.bind(this)} />
                     <div className="div-form-titulo">Contraseña</div>
                   </div>
                 </Col>
@@ -76,7 +126,7 @@ class SignUp extends React.Component {
               </Row> */}
 
               <div>
-                <button className="div-form-button">Aceptar</button>
+                <button className="div-form-button" onClick={this._handleSubmit.bind(this)}>Aceptar</button>
               </div>
             </Col>
             <Col sm={5} className="mt-5 pl-5">
