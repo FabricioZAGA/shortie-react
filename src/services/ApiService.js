@@ -12,7 +12,6 @@ export default class ApiService {
   * @return {axios}      [description]
   */
   static get(type) {
-
     return axios.get(`${ApiService.endpoint}${type}`);
   }
 
@@ -45,8 +44,16 @@ export default class ApiService {
   * @return {axios} response
   */
   static update(id, post, type) {
-    console.log(type)
     return axios.put(`${ApiService.endpoint}${type}/${id}`, post, {
+      headers: {
+        "Content-Type": "application/json"
+      }
+    });
+  }
+
+  static updateByIndex(post, type) {
+    console.log("aiuda")
+    return axios.put(`${ApiService.endpoint}${type}`, post, {
       headers: {
         "Content-Type": "application/json"
       }
@@ -60,5 +67,9 @@ export default class ApiService {
   */
   static delete(id, type) {
     return axios.delete(`${ApiService.endpoint}/${id}`);
+  }
+
+  static deleteByIndex(string, type) {
+    return axios.delete(`${ApiService.endpoint}${string}`);
   }
 }

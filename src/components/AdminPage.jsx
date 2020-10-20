@@ -27,6 +27,7 @@ class AdminPage extends React.Component {
       restaurantUser: props.match.params.name,
       renderPage: "",
       propsNum: "",
+      restaurantAddress: ''
     };
   }
 
@@ -36,10 +37,15 @@ class AdminPage extends React.Component {
       this.props.history.push(
         `/home`)
     }
-    if (!Cookies.get('login-record-set').response.restaurantAddress) {
-      this.props.history.push(`/new`)
+
+    try {
+      if (!Cookies.get('login-record-set').response.restaurantAddress) {
+        this.props.history.push(`/new`)
+      }
+    } catch {
+
     }
-    console.log(Cookies.get('login-record-set').response)
+
     document.title = `${this.state.restaurantUser} admin console`;
 
     this.getMenuIdByUserEmail();
@@ -61,6 +67,7 @@ class AdminPage extends React.Component {
 
           })
           Cookies.set('login-record-set', this.state)
+          Cookies.set('id-menu', element.id)
           return
         }
       });

@@ -6,10 +6,10 @@
 
 /*-----------------NavbarAdmin-----------------*/
 
-.admin-divition-horizontal{
-    width: 100% !important;
-    height: 4px !important;
-    background-color: #00a6e2;
+.admin-divition-horizontal {
+  width: 100% !important;
+  height: 4px !important;
+  background-color: #00a6e2;
 }
 
 .NavbarAdmin {
@@ -24,11 +24,12 @@
   margin-left: 50px;
 }
 
-.imgNavbarAdmin > h6 {
+.imgNavbarAdmin>h6 {
   margin-right: 10px !important;
   font-size: 2.3em;
 }
-.imgNavbarAdmin > h1 {
+
+.imgNavbarAdmin>h1 {
   font-family: "Shortie Principal" !important;
   font-size: 1.5em;
   color: #00a6e2;
@@ -42,37 +43,37 @@
   margin-right: 50px;
 }
 
-.navExit > h6 {
+.navExit>h6 {
   margin-left: 20px !important;
   font-size: 2em;
   transition: .2s;
-  color:  #00a6e2;
+  color: #00a6e2;
 }
 
-.navExit > h6:hover {
-    font-size: 2.3em;
+.navExit>h6:hover {
+  font-size: 2.3em;
 }
 
-.navExit > h6:active {
-    color:  #00a6e27a;
-    -webkit-text-stroke: 1px #00a6e2;
+.navExit>h6:active {
+  color: #00a6e27a;
+  -webkit-text-stroke: 1px #00a6e2;
 }
 
 
-.navExit > h1 {
+.navExit>h1 {
   font-family: "Shortie Admin Name" !important;
   font-size: 1.2em;
   color: #00a6e2;
 }
 
 @media (max-width: 767px) {
-  .imgNavbarAdmin > h1::after {
+  .imgNavbarAdmin>h1::after {
     content: "SAC" !important;
   }
 }
 
 @media (min-width: 767px) {
-  .imgNavbarAdmin > h1::after {
+  .imgNavbarAdmin>h1::after {
     content: "Shortie Admin Console" !important;
   }
 }
@@ -80,109 +81,116 @@
 
 /*-----------------AdminBar-----------------*/
 
-.admin-divition-vertical{
-    height: calc(100vh - 74px) !important;
-    width: 4px !important;
-    background-color: #00a6e2;
-}
-.admin-bar-content{
-    padding-top: 20px !important;
-    overflow: scroll !important;
-    overflow-x: hidden !important;
-    width: calc(100vw - 84px) !important;
-    height: calc(100vh - 74px) !important;
-}
-.admin-bar-Menu{
-    width: 80px;
-    height: calc(100vh - 74px) !important;
-    z-index: 10000 !important;
-    position: relative;
-    
-}
-.admin-bar-icons{
-    position: absolute !important;
-    top: 0px !important;
-    bottom: 0px !important;
-    left: 0px !important;
-    right: 0px !important;
-    z-index: 10000 !important;
-    background-color: white;
-    padding-top: 30px !important;
+.admin-divition-vertical {
+  height: calc(100vh - 74px) !important;
+  width: 4px !important;
+  background-color: #00a6e2;
 }
 
-.admin-bar-hover{
-    position: absolute !important;
-    top: 0px !important;
-    bottom: 0px !important;
-    left: -74px !important;
-    /* left: 80px !important; */
-    width: 154px !important;
-    background-color: white;
-    transition: 1s !important
+.admin-bar-content {
+  padding-top: 20px !important;
+  overflow: scroll !important;
+  overflow-x: hidden !important;
+  width: calc(100vw - 84px) !important;
+  height: calc(100vh - 74px) !important;
+}
+
+.admin-bar-Menu {
+  width: 80px;
+  height: calc(100vh - 74px) !important;
+  z-index: 10000;
+  position: relative;
+
+}
+
+.admin-bar-icons {
+  position: absolute !important;
+  top: 0px !important;
+  bottom: 0px !important;
+  left: 0px !important;
+  right: 0px !important;
+  z-index: 10000;
+  background-color: white;
+  padding-top: 30px !important;
+}
+
+.admin-bar-hover {
+  position: absolute !important;
+  top: 0px !important;
+  bottom: 0px !important;
+  left: -74px !important;
+  /* left: 80px !important; */
+  width: 154px !important;
+  background-color: white;
+  transition: 1s !important
 }
 
 
-.admin-bar-Menu:hover .admin-bar-hover{
-    left: 80px !important;
+.admin-bar-Menu:hover .admin-bar-hover {
+  left: 80px !important;
 }
 
 .admin-bar-hover::after {
-    left: 80px !important;
+  left: 80px !important;
 }
 
-.admin-bar-btn-contenido{
-    width: 150px !important;
-    height: 100% !important;
-    padding-top: 30px !important;
+.admin-bar-btn-contenido {
+  width: 150px !important;
+  height: 100% !important;
+  padding-top: 30px !important;
 }
 
-.admin-bar-btn{
-    position: relative;
-    font-family: "Shortie Admin Name" !important;
-    font-size: 1em;
-    outline: none !important;
-    border: none;
-    width: 100%;
-    margin-bottom: 10px;
-    height: 50px;
-    background-color: transparent;
-    color:  #00a6e2;
-    text-align: left;
+.admin-bar-btn {
+  position: relative;
+  font-family: "Shortie Admin Name" !important;
+  font-size: 1em;
+  outline: none !important;
+  border: none;
+  width: 100%;
+  margin-bottom: 10px;
+  height: 50px;
+  background-color: transparent;
+  color: #00a6e2;
+  text-align: left;
 }
 
-.barras-selection{
-    position: absolute;
-    top: 0px;
-    bottom: 0px;
-    left: -80px;
-    right: -4px;
-    background-color: transparent;
-    z-index: 100000 !important;
+.barras-selection {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: -80px;
+  right: -4px;
+  background-color: transparent;
+  z-index: 100000 !important;
 }
 
-.siempre-barras-selectio{
-    border-top: solid 2px #00a6e2;
-    border-bottom: solid 2px #00a6e2;
-    background-color:  #00a6e225;
+.siempre-barras-selectio {
+  border-top: solid 2px #00a6e2;
+  border-bottom: solid 2px #00a6e2;
+  background-color: #00a6e225;
 }
 
-.admin-bar-btn:hover .barras-selection{
-    border-top: solid 2px #00a6e2;
-    border-bottom: solid 2px #00a6e2;
+.admin-bar-btn:hover .barras-selection {
+  border-top: solid 2px #00a6e2;
+  border-bottom: solid 2px #00a6e2;
 }
 
 
-.admin-icon-btn{
-    width: 100%;
-    margin-bottom: 10px;
-    height: 50px;
-    color:  #00a6e2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.admin-icon-btn {
+  width: 100%;
+  margin-bottom: 10px;
+  height: 50px;
+  color: #00a6e2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
 }
 
-.admin-icon-btn span{
-    font-size: 2em;
+.admin-icon-btn span {
+  font-size: 2em;
+}
+
+.no-show-input {
+  display: none;
 }

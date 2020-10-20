@@ -79,7 +79,7 @@ class NewUser extends React.Component {
       ...this.state,
       restaurantAddress: {
         ...this.state.restaurantAddress,
-        zipCode: event.target.value,
+        zipCode: Number(event.target.value)
       }
     })
   }
@@ -87,22 +87,29 @@ class NewUser extends React.Component {
   _handlePhoneNumberChange(event) {
     this.setState({
       ...this.state,
-      restaurantAddress: {
-        ...this.state.restaurantAddress,
-        phoneNumber: event.target.value,
-      }
+      phoneNumber: Number(event.target.value)
     })
+    console.log(this.state)
   }
 
   async _handleSubmit() {
     const email = Cookies.get('login-record-set').response.email
     var response = await ApiService.update(email, this.state, 'personalInfo')
     response = response.data;
+    Cookies.set('login-record-set', response)
+    ///home/${response.restaurantName}?name=${response.email}`
+    if (response && response != undefined) {
+      const obj = {
+        userEmail: response.email,
+        logoImg: 'https://shortie-images.s3.us-east-2.amazonaws.com/imagotipo.jpg',
+        bannerImg: 'https://shortie-images.s3.us-east-2.amazonaws.com/imagotipoBlanco.jpg',
+      }
+      var response2 = await ApiService.insert(obj, 'menus')
 
-    if (response) {
-      Cookies.set('login-record-set', { bool: true })
+      console.log(response.restaurantName, response.email)
       this.props.history.push(
         `/admin/console/home/${response.restaurantName}?name=${response.email}`)
+
     }
 
   }
@@ -171,7 +178,7 @@ class NewUser extends React.Component {
               <Row>
                 <Col xs={6}>
                   <div className="divFormNewReg">
-                    <input type="tel" onInput={this._handlePhoneNumberChange.bind(this)} placeholder="Teléfono" />
+                    <input type="number" onInput={this._handlePhoneNumberChange.bind(this)} placeholder="Teléfono" />
                   </div>
                 </Col>
                 <Col xs={6} sm={6} >

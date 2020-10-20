@@ -1,6 +1,9 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
+import DeleteModal from './DeleteModal';
+import Cookies from '../../services/CookiesService'
+
 
 class Plans extends React.Component {
   constructor(props) {
@@ -9,7 +12,20 @@ class Plans extends React.Component {
       img: props.imagen,
       title: props.titulo,
       description: props.desc,
+      index: props.index,
+      query: this.props.location.search,
     };
+  }
+
+  _handleMoveToPage(value) {
+    if (value != undefined) {
+      Cookies.set('object-index', this.state.index)
+      this.props.history.push(
+        `/admin/console/upload/${Cookies.get('login-record-set').restaurantUser}${this.state.query}`
+      );
+      window.location.reload(false)
+    }
+
   }
 
   render() {
@@ -24,8 +40,8 @@ class Plans extends React.Component {
           <h2>{this.state.description}</h2>
         </div>
         <div className="plate-buttons">
-          <button className="label-input-file">EDITAR</button>
-          <button className="icon-bin2 label-input-file red-color"></button>
+          <button className="label-input-file" onClick={this._handleMoveToPage.bind(this, 0)}>EDITAR</button>
+          <DeleteModal id={this.state.index}></DeleteModal>
         </div>
       </div>
     );

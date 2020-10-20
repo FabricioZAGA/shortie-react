@@ -35,7 +35,7 @@ class NavbarAdmin extends React.Component {
   }
 
   async _changePage(num) {
-    
+
     var type = "home";
     switch (num) {
       case 1:
@@ -61,10 +61,9 @@ class NavbarAdmin extends React.Component {
         break;
     }
 
-    this._applyChanges(num-1);
+    this._applyChanges(num - 1);
 
     this.props.onSubmit(type);
-
     //
   }
 

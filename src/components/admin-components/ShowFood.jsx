@@ -39,12 +39,13 @@ class ShowFood extends React.Component {
 
   renderDishes() {
 
-    return this.state.dishes.map(element => (
+    return this.state.dishes.map((element, i) => (
       <Col sm="6" md="4" lg="3">
         <FoodContainer
           imagen={element.img}
           titulo={element.name}
           desc={element.description}
+          index={i}
         />
       </Col>
     ));

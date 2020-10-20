@@ -49,12 +49,13 @@ class Navbar extends React.Component {
 
     if (Cookies.get('login-record-set')) {
 
-      console.log(Cookies.get('login-record-set'))
+      console.log(Cookies.get('login-record-set'), "AIUIDAAAAAAAAAAAAAAAAAAAAAAAAA")
       const response = Cookies.get('login-record-set');
       // this.props.history.push(
       //   `/home`)
+
       this.props.history.push(
-        `/admin/console/home/${response.restaurantUser}?name=${response.name}`)
+        `/admin/console/home/${response.restaurantName}?name=${response.name}`)
     } else {
       this.props.history.push(
         `/login`)
