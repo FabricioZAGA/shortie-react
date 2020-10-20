@@ -6,7 +6,8 @@ import { withRouter } from "react-router-dom";
 import logo from "../img/imagotipoBlanco.png";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../css/generalStyles.css";
-
+import Swal from 'sweetalert2/dist/sweetalert2.js'
+import 'sweetalert2/src/sweetalert2.scss'
 
 
 class Login extends React.Component {
@@ -35,14 +36,37 @@ class Login extends React.Component {
 
   async _handleSubmit() {
     var response = await ApiService.getById(this.state.email, 'personalInfo')
-    response = response.data;
 
-    if (response) {
+
+    if (response.status == 200) {
+      response = response.data;
       if (response.password == this.state.password) {
-        Cookies.set('login-record-set', { response, bool: true })
-        this.props.history.push(`/admin/console/home/${response.restaurantName}?name=${response.email}`)
+        Swal.fire(
+          '¡Exito!',
+          'Has iniciado sesión correctamente',
+          'success'
+        ).then(() => {
+          Cookies.set('login-record-set', { response, bool: true })
+          this.props.history.push(`/admin/console/home/${response.restaurantName}?name=${response.email}`)
+        })
+      } else {
+        Swal.fire({
+          icon: 'error',
+          title: 'Contraseña Incorrecta',
+          text: 'Las credenciales de inicio de sesión no son correctas :(',
+        })
       }
+    } else {
+      Swal.fire({
+        icon: 'warning',
+        title: 'Ooopsi...',
+        text: 'Algo no está bien',
+      })
     }
+  }
+
+  _handleCreateAccount() {
+
   }
 
   render() {
@@ -81,7 +105,7 @@ class Login extends React.Component {
               </Col>
               <Row className="mt-4">
                 <Col xs={12} sm={6} >
-                  <span className="buttonRegistro">¿No tienes cuenta?</span>
+                  <span className="buttonRegistro" onClick={this._handleCreateAccount.bind(this)}>¿No tienes cuenta?</span>
                 </Col>
                 <Col xs={12} sm={6} >
                   <Button className="buttonLogin" onClick={this._handleSubmit.bind(this)}>Entrar</Button>

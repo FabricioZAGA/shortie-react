@@ -1,7 +1,9 @@
 import React from "react";
 
 import ApiService from "../../services/ApiService";
+import Swal from 'sweetalert2/dist/sweetalert2.js'
 
+import 'sweetalert2/src/sweetalert2.scss'
 import { withRouter } from "react-router-dom";
 import { Form, Col, Button, Container, Row } from "react-bootstrap";
 import "../../css/singUp.css";
