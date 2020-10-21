@@ -69,14 +69,19 @@ class Login extends React.Component {
 
   }
 
+  _handleHomeButton() {
+    this.props.history.push(`/home`)
+  }
+
   render() {
     return (
       <div className="loginScreen">
         <Container fluid>
           <Row >
             <Navbar>
-              <Navbar.Brand href="#home">
+              <Navbar.Brand >
                 <img
+                  onClick={this._handleHomeButton.bind(this)}
                   src={logo}
                   width="70"
                   height="70"
