@@ -1,0 +1,25 @@
+.animation-modal-div {
+    position: fixed;
+    z-index: 1000000000000000000000000000000000;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.836);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: 4s slidein forwards;
+    /* animation: 5s slidein infinite alternate; */
+  }
+  
+  @keyframes slidein {
+    0% {
+    }
+  
+    100% {
+      visibility: hidden;
+      z-index: -1000;
+    }
+  }
+  
