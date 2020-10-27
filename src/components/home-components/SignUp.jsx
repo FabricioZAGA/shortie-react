@@ -162,9 +162,7 @@ class SignUp extends React.Component {
             <Col sm={5} className="mt-5 pl-5">
               <h1 className="mt-5 titulos">Registro</h1>
               <h3>
-                ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
-                lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel
-                eum iriure dolor in hendrerit in vul
+                Ingresa tus datos y comienza hoy a usar Shortie.
               </h3>
             </Col>
           </Row>
