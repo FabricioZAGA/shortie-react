@@ -12,13 +12,7 @@ class Plans extends React.Component {
     return (
       <Container id="section2">
         <Row className="justify-content-center">
-          <Col xs="7" md="3" className="pt-md-3">
-            <PlanInformation />
-          </Col>
           <Col xs="7" md="4">
-            <PlanInformation />
-          </Col>
-          <Col xs="7" md="3" className="pt-md-3">
             <PlanInformation />
           </Col>
         </Row>

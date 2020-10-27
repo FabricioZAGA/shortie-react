@@ -26,9 +26,7 @@ class QrTest extends React.Component {
             <Col sm={8}>
               <h1 className="mt-5 qrTitle">Haz la prueba</h1>
               <h3>
-                ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
-                lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel
-                eum iriure dolor in hendrerit in vul
+                Escanea este código QR para que puedas observar un ejemplo de como se vería tu menú digital, en Shortie buscamos que puedas mostrar tus productos de una manera simple y limpia, ¡COMPRUÉBALO!
               </h3>
             </Col>
           </Row>

@@ -10,7 +10,7 @@ class Plans extends React.Component {
     return (
       <div>
         <div className="container-plan">
-          <div className="plan-title">PRO PLAN</div>
+          <div className="plan-title">FreePlan</div>
           <div className="curvas">
             <div className="linea"></div>
             <div className="linea-2"></div>
@@ -19,10 +19,9 @@ class Plans extends React.Component {
             <img src={tacos}></img>
           </div>
           <div className="plan-texto">
-            <h1 className="texto-subtitulo"> LIGTH CARD TITLE</h1>
+            <h1 className="texto-subtitulo"></h1>
             <h4 className="texto-descripcion">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem
-              ipsum dolor sit amet consectetur adipisicing elit.
+              Utiliza Shortie completamente gratis, solo realiza tu registro, crea tu menú e imprime tu código QR, ASÍ DE FÁCIL, comienza a usar Shortie HOY.
             </h4>
             <div className="texto-boton">
               <button className="texto-boton-hover">CHOSSE PLAN</button>
