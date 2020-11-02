@@ -23,9 +23,9 @@ class Plans extends React.Component {
             <h4 className="texto-descripcion">
               Utiliza Shortie completamente gratis, solo realiza tu registro, crea tu menú e imprime tu código QR, ASÍ DE FÁCIL, comienza a usar Shortie HOY.
             </h4>
-            <div className="texto-boton">
+            {/* <div className="texto-boton">
               <button className="texto-boton-hover">CHOSSE PLAN</button>
-            </div>
+            </div> */}
           </div>
 
           <div className="barra-sombra"></div>

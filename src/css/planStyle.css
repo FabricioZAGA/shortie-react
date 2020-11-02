@@ -153,3 +153,35 @@
   height: 58px;
   width: 100%;
 }
+
+
+/* ---------------------------- Principal -------------------------*/
+
+/* .plans-principal-container{
+  background-image: url('https://shortie-images.s3.us-east-2.amazonaws.com/background/background-image-1.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 150% auto;
+} */
+
+
+@media (max-width: 767px) {
+  .plans-principal-container{
+    height: auto;
+    width: 100%;
+    padding-top: 40px;
+    box-sizing: border-box;
+  }
+  
+}
+
+@media (min-width: 767px) {
+  .plans-principal-container{
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+}

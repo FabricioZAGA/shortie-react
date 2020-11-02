@@ -27,7 +27,7 @@ function App() {
           <Switch>
             {/* when user access /home, load Home */}
             <Route path="/home">
-              <NavBar />
+            <NavBar />
               <Home />
               <Footer />
             </Route>

@@ -66,13 +66,14 @@ class Navbar extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="bg-primary">
         <div className="navContainer"></div>
-        <div className="Navbar">
+        <div className="Navbar-principal">
           <div className="imgNavBar">
             <img src={Logo} onClick={scroll.scrollToTop()} style={{ cursor: "pointer" }} />
           </div>
           <div className="medioHamburger">{this._renderCenterButton()}</div>
+          
           <div className="iniciarSesion">
             <button onClick={this._handleLoginButton.bind(this)}>INICIAR SESIÓN</button>
           </div>

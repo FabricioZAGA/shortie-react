@@ -1,4 +1,4 @@
-.Navbar {
+.Navbar-principal {
   display: flex;
   position: fixed;
   top: 0px;
@@ -13,13 +13,12 @@
   height: 100px;
 }
 
-.imgNavBar>img {
+.imgNavBar > img {
   margin-left: 50px;
   width: 100px;
-
 }
 
-.iniciarSesion>button {
+.iniciarSesion > button {
   height: 40px;
   border-radius: 40px !important;
   padding-left: 10px !important;
@@ -30,7 +29,7 @@
   outline: none !important;
 }
 
-.iniciarSesion>button:hover {
+.iniciarSesion > button:hover {
   background-color: black;
   color: white;
 }
@@ -42,6 +41,10 @@
 }
 
 @media (max-width: 767px) {
+  .iniciarSesion > button {
+    font-size: small !important;
+  }
+
   .medioHamburger {
     display: none;
   }
@@ -51,7 +54,7 @@
     margin-right: auto !important;
   }
 
-  .imgNavBar>img {
+  .imgNavBar > img {
     margin-left: auto !important;
     margin-right: auto !important;
   }
@@ -76,7 +79,6 @@
     margin-right: auto;
     display: flex;
     align-items: center;
-
   }
 
   .buttonNavbar {
@@ -86,9 +88,9 @@
     margin-right: 5px !important;
     padding-left: 10px !important;
     padding-right: 10px !important;
-    border: 2px solid #00A6E2;
+    border: 2px solid #00a6e2;
     background-color: transparent;
-    color: #00A6E2;
+    color: #00a6e2;
     outline: none !important;
     display: flex;
     align-items: center;
@@ -98,10 +100,9 @@
   }
 
   .buttonNavbar:hover {
-    background-color: #00A6E2;
+    background-color: #00a6e2;
     color: white;
   }
-
 
   .sliderNavbar {
     margin-left: 3em !important;
@@ -134,7 +135,7 @@
   height: 70px;
 }
 
-.footer-container>div {
+.footer-container > div {
   width: 100%;
   height: 100%;
   display: flex;
@@ -156,7 +157,7 @@
   right: 0px !important;
   width: 70px !important;
   height: 70px !important;
-  border: 3.5px solid #00A6E2;
+  border: 3.5px solid #00a6e2;
   border-radius: 100px;
   background-color: white;
   display: flex;
@@ -164,7 +165,7 @@
   justify-content: center;
 }
 
-.footer-img>img {
+.footer-img > img {
   width: 105% !important;
 }
 

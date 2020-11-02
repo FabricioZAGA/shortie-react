@@ -21,7 +21,7 @@ class Home extends React.Component {
       <div className="mt-3">
         <ImageSlider className="mb-5" />
         <br />
-        <MenuDescription className="px-5" />
+        <MenuDescription />
         <br />
         <Plans />
         <br />

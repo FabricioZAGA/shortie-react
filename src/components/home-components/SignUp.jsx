@@ -86,10 +86,10 @@ class SignUp extends React.Component {
 
   render() {
     return (
-      <div>
-        <Container id="section4">
+      <div className="sign-up-container" id="section4">
+        <Container >
           <Row clasName="p-5">
-            <Col sm={7}>
+            <Col xs="12" md={7}>
               <Row>
                 <Col xs={12}>
                   <div className="div-form">
@@ -155,13 +155,13 @@ class SignUp extends React.Component {
                 </Col>
               </Row> */}
 
-              <div>
+              <div className="d-flex align-items-center justify-content-end">
                 <button className="div-form-button" onClick={this._handleSubmit.bind(this)}>Aceptar</button>
               </div>
             </Col>
-            <Col sm={5} className="mt-5 pl-5">
+            <Col xs="12" md={5} className="mt-md-5 pl-md-5 order-first order-md-last">
               <h1 className="mt-5 titulos">Registro</h1>
-              <h3>
+              <h3 className="qrContent">
                 Ingresa tus datos y comienza hoy a usar Shortie.
               </h3>
             </Col>
