@@ -10,7 +10,7 @@ class MenuDescription extends React.Component {
         <Container className="h-100">
           <Row style={{ height: "10%" }} >
             <Col className="d-flex justify-content-center align-items-center h-100">
-              <h2 className="mb-md-5 mt-md-4 menuTitle">Menú Visual</h2>
+              <h2 className="mb-md-5 mt-md-4 menuTitle">Menú Virtual</h2>
             </Col>
           </Row>
           <Row

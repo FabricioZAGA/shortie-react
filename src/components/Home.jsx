@@ -26,7 +26,6 @@ class Home extends React.Component {
         <Plans />
         <br />
         <QrTest />
-        <br />
         <SignUp />
         <br />
         <QrFooter />

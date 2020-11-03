@@ -22,7 +22,7 @@ class Navbar extends React.Component {
   async componentDidMount() {
     this.setState({
       elements: [
-        { name: "MENÚ VISUAL" },
+        { name: "MENÚ VIRTUAL" },
         { name: "PLANES" },
         { name: "PRUEBA" },
         { name: "REGISTRO" },
@@ -54,8 +54,10 @@ class Navbar extends React.Component {
       // this.props.history.push(
       //   `/home`)
 
+      console.log(response);
+
       this.props.history.push(
-        `/admin/console/home/${response.restaurantName}?name=${response.name}`)
+        `/admin/console/home/${response.restaurantUser}?name=${response.name}`)
     } else {
       this.props.history.push(
         `/login`)
