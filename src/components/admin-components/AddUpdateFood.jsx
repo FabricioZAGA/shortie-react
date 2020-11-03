@@ -43,15 +43,20 @@ class AddUpdateFood extends React.Component {
   renderDishes() {
     var array = [];
 
+    debugger
     this.state.dishes.reverse().map((element, i) => {
-      if (i < 3)
+      if (i < 3) {
         array.push(element);
+      }
     });
-    return array.map(element => (
+
+    const indexes = [this.state.dishes.length - 1, this.state.dishes.length - 2, this.state.dishes.length - 3];
+    return array.map((element, i) => (
       <FoodContainer
         imagen={element.img}
         titulo={element.name}
         desc={element.description}
+        index={indexes[i]}
       />
     ));
   }
