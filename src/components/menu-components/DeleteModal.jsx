@@ -41,7 +41,9 @@ function DeleteModal(props) {
           <Modal.Title>¿Eliminar Platillo?</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          Esta acción puede llegar a ser mortal D:
+          ¿Estás seguro que desea eliminar este platillo?
+          <br />
+          Esta acción no se podrá revertir.
         </Modal.Body>
         <Modal.Footer>
           <button className=" label-input-file " onClick={handleClose}>Cerrar</button>
