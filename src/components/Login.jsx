@@ -8,7 +8,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "../css/generalStyles.css";
 import Swal from 'sweetalert2/dist/sweetalert2.js'
 import 'sweetalert2/src/sweetalert2.scss'
-
+import Loader from 'react-loader-spinner'
 
 class Login extends React.Component {
 
@@ -16,7 +16,8 @@ class Login extends React.Component {
     super(props);
     this.state = {
       email: ' ',
-      password: ' '
+      password: ' ',
+      showButton: true
     };
   }
 
@@ -34,9 +35,17 @@ class Login extends React.Component {
     })
   }
 
-  async _handleSubmit() {
-    var response = await ApiService.getById(this.state.email, 'personalInfo')
+  _handleVisibilityChanges(button) {
+    this.setState({
+      ...this.state,
+      showButton: button
+    })
+  }
 
+  async _handleSubmit() {
+    this._handleVisibilityChanges(false)
+    var response = await ApiService.getById(this.state.email, 'personalInfo')
+    this._handleVisibilityChanges(true)
 
     if (response.status == 200) {
       response = response.data;
@@ -88,11 +97,13 @@ class Login extends React.Component {
                   className="d-inline-block align-top"
                   alt="Shortie Logo"
                 />
+
               </Navbar.Brand>
             </Navbar>
           </Row>
           <Row>
             <div className="centeredLogin" >
+
               <Col xs={12} className="mb-5">
                 <span className="textTitleLogin">Login</span>
               </Col>
@@ -113,7 +124,15 @@ class Login extends React.Component {
                   <span className="buttonRegistro" onClick={this._handleCreateAccount.bind(this)}>¿No tienes cuenta?</span>
                 </Col>
                 <Col xs={12} sm={6} >
-                  <Button className="buttonLogin" onClick={this._handleSubmit.bind(this)}>Entrar</Button>
+                  {this.state.showButton ? <Button className="buttonLogin" onClick={this._handleSubmit.bind(this)}>Entrar</Button> : <Loader
+                    className="loader"
+                    type="Oval"
+                    color="#00BFFF"
+                    height={40}
+                    width={40}
+                  />}
+
+
                 </Col>
               </Row>
             </div>

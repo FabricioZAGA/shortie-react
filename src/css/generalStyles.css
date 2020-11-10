@@ -1,13 +1,11 @@
-
-
-.qr-test-container{
+.qr-test-container {
   background-image: url('../img/prueba.png');
   background-size: auto 150%;
   background-position: center center;
   background-repeat: no-repeat;
 }
 
-.sign-up-container{
+.sign-up-container {
   background-image: url('../img/compu.png');
   background-size: 180% auto;
   background-position: center center;
@@ -15,7 +13,7 @@
 }
 
 @media (max-width: 767px) {
-  .qr-test-container{
+  .qr-test-container {
     height: auto;
     width: 100%;
     padding-top: 40px;
@@ -33,19 +31,19 @@
     font-size: 2em !important;
     color: white;
     border-radius: 50px;
-  
+
     margin-bottom: 1em;
   }
 
-  .qrContent{
+  .qrContent {
     font-size: 1.3em !important;
     text-align: center;
   }
-  
+
 }
 
 @media (min-width: 767px) {
-  .qr-test-container{
+  .qr-test-container {
     height: 90vh;
     width: 100%;
     padding-top: 40px;
@@ -66,11 +64,11 @@
     width: 47%;
     color: white;
     border-radius: 50px;
-  
+
     margin-bottom: 1em;
   }
 
-  .qrContent{
+  .qrContent {
     font-size: 1.3em !important;
   }
 }
@@ -78,7 +76,7 @@
 
 
 @media (max-width: 767px) {
-  .menu-visual-container{
+  .menu-visual-container {
     height: auto;
     width: 100%;
     padding-top: 10px;
@@ -97,15 +95,15 @@
     border-radius: 50px;
     margin-bottom: 20px;
   }
-  
-  .mv-center-image-dlv > img {
+
+  .mv-center-image-dlv>img {
     width: 80% !important;
     margin-bottom: 20px;
   }
 }
 
 @media (min-width: 767px) {
-  .menu-visual-container{
+  .menu-visual-container {
     height: 90vh;
     width: 100%;
     padding-top: 40px;
@@ -121,10 +119,10 @@
     width: 47%;
     color: white;
     border-radius: 50px;
-  
+
     margin-bottom: 1em;
   }
-  
+
 }
 
 
@@ -223,6 +221,11 @@
   margin: 0px 15px 0px 0px;
 }
 
+.loader {
+  float: right;
+  margin: 0px 15px 0px 0px;
+}
+
 .buttonRegistro {
   background-color: transparent;
   color: black;
@@ -236,14 +239,14 @@
 
 
 
-.mv-center-image-dlv{
-  display: flex ;
+.mv-center-image-dlv {
+  display: flex;
   justify-content: center;
   align-items: center;
 
 }
 
-.mv-center-image-dlv > img {
+.mv-center-image-dlv>img {
   border-radius: 3em;
 
 }
@@ -254,7 +257,7 @@
   box-sizing: border-box;
 }
 
-.mv-center-image-content > div {
+.mv-center-image-content>div {
   font-size: 1.2em !important;
   border: 2px solid #00A6E2;
   border-radius: 50px;
@@ -266,7 +269,7 @@
   justify-content: center;
 }
 
-.mv-center-image-content > div > h4 {
+.mv-center-image-content>div>h4 {
   font-size: 1.1em !important;
 }
 
@@ -283,21 +286,19 @@
 
 
 /*------------------------------------------- Accordeon -----------------------------------------------------*/
-.accordeon-card-class{
+.accordeon-card-class {
   background-color: transparent;
   border-color: #00a6e2;
 }
 
-.accordeon-toggle-class{
+.accordeon-toggle-class {
   background-color: transparent;
   border-color: #00a6e2;
   color: #00a6e2;
   cursor: pointer;
 }
 
-.accordeon-collapse-class{
-
-}
+.accordeon-collapse-class {}
 
 .prueba-no-se-que-pasa {
   width: 100% !important;
@@ -306,7 +307,7 @@
 
 
 @media (max-width: 767px) {
-  .sign-up-container{
+  .sign-up-container {
     height: auto;
     width: 100%;
     padding-top: 40px;
@@ -324,13 +325,13 @@
     width: auto;
     color: white;
     border-radius: 50px;
-  
+
     margin-bottom: .5em;
   }
 }
 
 @media (min-width: 767px) {
-  .sign-up-container{
+  .sign-up-container {
     height: 90vh;
     width: 100%;
     padding-top: 40px;
@@ -350,7 +351,7 @@
     width: 180px;
     color: white;
     border-radius: 50px;
-  
+
     margin-bottom: 1em;
   }
 }
