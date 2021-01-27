@@ -9,7 +9,7 @@ class QrTest extends React.Component {
     return (
       <div className="qr-test-container" id="section3">
         <Container>
-          <Row clasName="p-5 mt-5">
+          <Row className="p-5 mt-5">
             <Col
               md={4}
               className="d-flex justify-content-center align-items-center"

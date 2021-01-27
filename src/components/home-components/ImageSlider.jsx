@@ -10,9 +10,9 @@ class ImageSlider extends React.Component {
     return (
       <div className="sliderNavbarg">
         <AwesomeSlider>
-          <div data-src="https://shortie-images.s3.us-east-2.amazonaws.com/background/background-image-8.jpg" />
-          <div data-src="https://shortie-images.s3.us-east-2.amazonaws.com/background/background-image-3.jpg" />
-          <div data-src="https://shortie-images.s3.us-east-2.amazonaws.com/background/background-image-7.jpg" />
+          <div data-src="https://shortie-img.s3.us-east-2.amazonaws.com/background-image-8.jpg" />
+          <div data-src="https://shortie-img.s3.us-east-2.amazonaws.com/background-image-3.jpg" />
+          <div data-src="https://shortie-img.s3.us-east-2.amazonaws.com/background-image-7.jpg" />
           {/* <div data-src="https://imagenes.milenio.com/-Us-fVHSBLtRnA5KLRP4-RVxX4s=/958x596/https://www.milenio.com/uploads/media/2019/09/28/jose-jose-cuartoscuro-1_0_28_800_497.jpg" /> */}
         </AwesomeSlider>
       </div>

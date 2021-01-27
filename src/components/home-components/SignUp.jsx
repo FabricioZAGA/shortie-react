@@ -88,7 +88,7 @@ class SignUp extends React.Component {
     return (
       <div className="sign-up-container" id="section4">
         <Container >
-          <Row clasName="p-5">
+          <Row className="p-5">
             <Col xs="12" md={7}>
               <Row>
                 <Col xs={12}>
